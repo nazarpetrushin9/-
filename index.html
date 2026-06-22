@@ -3,50 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Профиль</title>
+    <title>Sh1meeeeer • Профиль Instagram</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="prof-container">
-        
-        <div class="prof-header">
-            <div class="avatar">
-                <img src="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyejU1dnQzc3k1c3BsbTh6ZnpoaTdzN2l6ZnFucmt5aWZiNWU3eDQ0YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/wKJSRY2OgYx2m6R4oA/200.gif" alt="Avatar">
-            </div>
-            <div class="prof-info">
-                <h1>Sh1meeeeer</h1>
-                <button class="button">Подписаться</button>
- 
-                <div class="stats-container">
-                    <span class="posts-count">3 публикации</span>
-                    <span class="followers">1000 подписчиков</span>
-                    <span class="following">5 подписок</span>
-                </div>
+    <nav class="insta-nav">
+        <div class="nav-content">
+            <span class="logo">Sh1meeeeer</span>
+            <div class="nav-links">
+                <a href="index.html" class="active">Профиль</a>
+                <a href="index2.html">Библиотека</a>
+                <button id="theme-toggle" class="theme-btn">🌙</button>
             </div>
         </div>
+    </nav>
 
-        <div class="prof-bio">
-            <p><strong>Назар П.</strong></p>
-            <p>Возраст: 16 лет</p>
-            <p class="loc"> Город: Астана</p>
-        </div>
-
-         <div class="prof-posts">
-            <h2>Посты</h2>
-            <div class="posts-grid">
-                <div class="post">
-                    <img src="img/sonicc.webp" alt="Post 1">
-                </div>
-                <div class="post">
-                    <img src="img/ssosonic.jpeg" alt="Post 2">
-                </div>
-                <div class="post">
-                    <img src="img/angrysosonic.avif" alt="Post 3">
+    <main class="insta-container">
+        <div class="profile-layout">
+            
+            <div class="avatar-col">
+                <div class="avatar-story-ring">
+                    <div class="avatar-inner">
+                        <img src="img/images.jpeg" alt="Sh1meeeeer">
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
+            <div class="info-col">
+                <div class="username-row">
+                    <h1 class="username">Sh1meeeeer</h1>
+                    <button class="edit-btn">Подписаться</button>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-item"><strong>3</strong> публикации</div>
+                    <div class="stat-item"><strong>1 000</strong> подписчиков</div>
+                    <div class="stat-item"><strong>5</strong> подписок</div>
+                </div>
+
+                <div class="bio-row">
+                    <h2>Назар П.</h2>
+                    <p class="bio-text">Возраст: 16 лет</p>
+                    <p class="bio-location">📍 Город: Астана</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="insta-footer">
+        <div class="footer-links">
+            <a href="#">Telegram</a>
+            <a href="#">GitHub</a>
+            <a href="#">Контакты</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

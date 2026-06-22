@@ -1,0 +1,163 @@
+/* Копируем базовую эстетику первой страницы */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.insta-nav { background: #ffffff; border-bottom: 1px solid #dbdbdb; position: sticky; top: 0; z-index: 100; }
+.nav-content { width: 100%; max-width: 935px; margin: 0 auto; padding: 0 20px; height: 60px; display: flex; justify-content: space-between; align-items: center; }
+.insta-nav .logo { font-size: 22px; font-weight: bold; letter-spacing: -0.5px; }
+.nav-links a { text-decoration: none; color: #8e8e8e; font-weight: 600; font-size: 14px; margin-left: 20px; }
+.nav-links a.active, .nav-links a:hover { color: #262626; }
+.insta-container { width: 100%; flex-grow: 1; padding: 0 20px; background-color: #ffffff; }
+
+/* Специфичные стили для инста-сетки библиотеки */
+.library-wrapper {
+    max-width: 935px;
+    margin: 0 auto;
+}
+.insta-tabs {
+    border-top: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.tab-item {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 16px 0;
+    color: #262626;
+    border-top: 1px solid #262626;
+    margin-top: -1px;
+}
+
+/* Сетка постов (3 в ряд по умолчанию для аутентичности, 4-й перенесется красиво) */
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    padding-bottom: 40px;
+}
+
+/* Квадратные инста-карточки */
+.post-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Делает бокс строго квадратным */
+    background-color: #f1f1f1;
+    border: 1px solid #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+.post-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #262626;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Эффект затемнения при наведении (как в Instagram) */
+.post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.post-card:hover .post-overlay {
+    opacity: 1;
+}
+.open-post-btn {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.insta-footer { padding: 40px 20px; text-align: center; background: #ffffff; border-top: 1px solid #dbdbdb; }
+.footer-links { margin-bottom: 15px; }
+.footer-links a { color: #8e8e8e; text-decoration: none; font-size: 12px; margin: 0 10px; font-weight: 600; }
+.footer-copy { color: #8e8e8e; font-size: 12px; }
+
+.post-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1;
+}
+
+
+.post-content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.75); 
+    width: 100%;
+    padding: 10px 0;
+}
+
+
+.post-overlay {
+    z-index: 3;
+    padding: 15px;
+    text-align: center;
+}
+.open-post-btn {
+    font-size: 13px;
+    line-height: 1.4;
+}
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+body.dark {
+    background-color: #1c1c1e;
+    color: #ffffff;
+}
+body.dark .insta-nav {
+    background: #1c1c1e;
+    border-bottom: 1px solid #2c2c2e;
+}
+body.dark .nav-links a.active, body.dark .nav-links a:hover {
+    color: #ffffff;
+}
+body.dark .insta-container {
+    background-color: #1c1c1e;
+}
+body.dark .profile-layout {
+    border-bottom: 1px solid #2c2c2e;
+}
+body.dark .avatar-inner {
+    background: #1c1c1e;
+}
+body.dark .bio-text, body.dark .bio-location {
+    color: #ffffff;
+}
+
+
